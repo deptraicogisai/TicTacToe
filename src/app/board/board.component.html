@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-3 col-md-offset-4">
+    <button type="button" class="btn btn-large btn-block btn-primary" [disabled]="!endGame" (click)="StartGame()">Again</button>
+    <div class="row">
+      <div *ngFor="let item of square;let i = index" class="col-md-4 square" (click)="selectSquare(i)" board-value [value]="currentPlayerLabel"></div>
+    </div>
+  </div>
+</div>
